@@ -16,7 +16,7 @@ void quick_sort(int left, int right)
     pivot = a[left];
     while(i != j)
     {
-        while(a[j] >= pivot && j > i)
+        while(a[j] >= pivot && j > i)   //注意先从右边开始，若从左开始，不能保证与最左边交换的数小于pivot
             j--;
         while(a[i] <= pivot && i < j)
             i++;
