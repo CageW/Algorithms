@@ -6,7 +6,7 @@ using namespace std;
 
 int n, a[MaxNumber];
 
-void adjust(int i, int size)
+void adjust(int i, int size)    //将大元素上浮，并递归调节下方的堆
 {
     int maxMem = i;
     int lchild = 2 * i + 1;
@@ -24,7 +24,7 @@ void adjust(int i, int size)
     }
 }
 
-void heap_build()
+void heap_build()   //建立堆
 {
     int i = n / 2 - 1;
     while(i >= 0)
@@ -34,7 +34,7 @@ void heap_build()
     }
 }
 
-void heap_sort()
+void heap_sort()    //排序堆
 {
     heap_build();
     for(int i = n - 1; i >= 1; i--)
